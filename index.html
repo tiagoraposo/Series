@@ -1,0 +1,56 @@
+<head>
+<title>Series</title>
+</head>
+
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type='text/javascript'>
+
+ $(document).ready(function() {
+  var currentItem = 1;
+  $('#addnew').click(function(){
+   currentItem++;
+   $('#items').val(currentItem);
+var strToAdd = '<tr><td>Serie</td><td width="1%"><input name="Season'+currentItem+'" id="Season'+currentItem+'" type="text" /></td><td width="7%">Episode</td> <td><input name="episode'+currentItem+'" id ="max'+currentItem+'"type="number" /></td><td>Season</td><td><input name="Season'+currentItem+'" id="Season'+currentItem+'" type="number" /></td></tr>';
+   $('#data').append(strToAdd);
+   
+  });
+ });
+
+//]]>
+</script>
+
+<div class="counter-increment">
+    <script type="text/javascript">
+        var clicksEpisodio = 0;
+        function updateClickCount() {
+            document.getElementById("clickCount").innerHTML = clicksEpisodio;
+        }
+    </script>  
+</div>
+
+
+<table class="dd" width="100%" id="data">
+  
+  <tr>
+    <td>Serie</td>
+    <td width="17%"><input name="actual1" id="actual1" type="text" /></td>
+    <td width="17%">Episode</td>
+    <td><input name="target1" id="target1" type="number" /></td>
+    <td>Season</td>
+    <td><input name="target1" id="target1" type="number" /></td>
+    </tr>
+</table>
+   <input type="button" id="addnew" name="addnew" value="Add new Serie" /> 
+<input type="hidden" id="items" name="items" value="1" /> 
+
+
+
+
+
+
+
+
+
+
+
